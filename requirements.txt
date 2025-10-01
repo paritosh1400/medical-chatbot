@@ -22,3 +22,4 @@ pinecone>=6.0.0,<8.0.0
 pymongo>=4.0.0
 
 # Dev install
+gunicorn>=21.2.0
