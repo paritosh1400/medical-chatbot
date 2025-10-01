@@ -105,7 +105,8 @@
 #     app.run(host="0.0.0.0", port=8080, debug=True)
 
 from flask import Flask, render_template, request, jsonify
-from src.helper import download_hugging_face_embeddings
+# from src.helper import download_hugging_face_embeddings
+from src.helper import get_openai_embeddings
 from langchain_pinecone import PineconeVectorStore
 from langchain_openai import OpenAI
 from langchain_core.prompts import ChatPromptTemplate
@@ -139,7 +140,7 @@ db = client["medibot"]
 chats_collection = db["chats"]
 
 # ------------------ VECTOR DB ------------------
-embeddings = download_hugging_face_embeddings()
+embeddings = get_openai_embeddings()
 index_name = "medicalbot"
 docsearch = PineconeVectorStore.from_existing_index(
     index_name=index_name,

@@ -4,7 +4,7 @@ python-dotenv>=1.0.0
 pypdf>=3.9.0
 
 # Embeddings
-sentence-transformers>=2.6.0
+openai>=1.0.0
 
 # LangChain ecosystem (aligned on 0.3.x)
 langchain==0.3.7
@@ -21,5 +21,5 @@ pinecone>=6.0.0,<8.0.0
 # Mongo
 pymongo>=4.0.0
 
-# Dev install
+# Deployment
 gunicorn>=21.2.0
